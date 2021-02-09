@@ -9,19 +9,19 @@ import debounce from 'just-debounce-it'
 const SearchResults = ({params}) => {     
 
     const { keyword } = params;
-    const { loading, gifs, setPage } = useGifs({keyword})    
-    const externalRef = useRef();
-
-    const { isNearScreen } = useNearScreen({
+    const { loading, gifs, setPage } = useGifs({keyword})        
+    const externalRef = useRef()
+    
+    const {isNearScreen} = useNearScreen({
       externalRef: loading ? null : externalRef,
       once: false
-    }) 
+    })
 
     const debounceHandleNextPage = useCallback(debounce(
       () => setPage(prevPage => prevPage + 1), 200
     ), [setPage])
 
-    useEffect(() => {      
+    useEffect(() => {
       if (isNearScreen) debounceHandleNextPage()
     }, [debounceHandleNextPage, isNearScreen])
     
