@@ -1,0 +1,69 @@
+:root {
+  --fz: 16px;
+  --theme--contrast-0: #121212;
+  --theme-body-bg: #18061f;
+  --theme-body-txt: #f3f3f3;
+  --search-size-mx-h: 3rem;
+  --zIndex-header: 20;
+  --zIndex-component: 5;
+  --brand-color_1: #00ff99;
+  --brand-color_2: #00ccff;
+  --brand-color_3: #9933ff;
+  --brand-color_4: tomato;
+  --brand-color_5: #fff35c;
+  --brand-color_6: #8429de;
+  --brand-color_7: #e51b23;
+  --brand-color_7_hover: rgba(229,27,35,0.6)  ;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+li{
+  text-align: left;
+}
+
+button {
+  font-size: 48px;
+}
+
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  margin: 0 auto 30px;
+  justify-content: center;
+}
+
+input[type=text] { 
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 4px 16px;
+  border: none;
+  margin-right: 7px;
+} 
+
