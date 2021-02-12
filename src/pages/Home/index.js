@@ -1,10 +1,14 @@
 import React, { useCallback } from 'react'
 import { useLocation } from 'wouter'
+import Helmet from 'react-helmet'
 import useGifs from 'hooks/useGifs'
 import SearchForm from 'components/SearchForm'
 import ListOfGifs from 'components/ListOfGifs'
 import Category from 'components/Category'
 import TrendingSearches from 'components/TrendingSearches'
+
+// htmlhead.dev --> Podemos ver todos los tags básicos que se utilizan en el HEAD
+
 
 const Home = () => {
    
@@ -18,6 +22,9 @@ const Home = () => {
 
     return ( 
         <>
+            <Helmet>
+                <title>Home | Giffy </title>
+            </Helmet>
             <SearchForm onSubmit={handleSubmit} />
             <div className="App-main">
                 <div className="App-results">

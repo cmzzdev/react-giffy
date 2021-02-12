@@ -8,9 +8,9 @@ const useGifs = ({keyword} = { keyword: null }) => {
 
     const [ loading, setLoading ] = useState(false);
     const [ loadingNextPage, setLoadingNextPage ] = useState(false)
+
     const [ page, setPage ] = useState(0)
-    const { gifs, setGifs } = useContext(GifsContext)
-    //const [ gifs, setGifs ] = useState([]);    
+    const { gifs, setGifs } = useContext(GifsContext) 
     
     // Recuperamos la última keyword de localStorage
     const keywordToUse = keyword || localStorage.getItem('lastKeyword') || 'random'
